@@ -24,5 +24,9 @@ export function checkTags(paragraph: string): string {
         }
     }
 
-    return "Correctly tagged paragraph";
+    if (stack.length === 0) {
+        return "Correctly tagged paragraph";
+    }
+
+    return `Expected </${stack[stack.length - 1].substring(1, 2)}> found #`
 }
