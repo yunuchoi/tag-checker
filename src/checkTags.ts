@@ -10,12 +10,10 @@ export function checkTags(paragraph: string): string {
             }
             
             // Compare the closing tag with the most recent opening tag
-            const openingTag: string = stack[stack.length - 1].substring(1, 2);
+            const openingTag: string = stack.pop()!.substring(1, 2);
             const closingTag: string = tag.substring(2, 3);
             
-            if (openingTag === closingTag) {
-                stack.pop();
-            } else {
+            if (openingTag !== closingTag) {
                 return `Expected </${openingTag}> found </${closingTag}>`
             }
         } else {
