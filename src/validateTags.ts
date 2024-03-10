@@ -52,7 +52,7 @@ function tagsMatch(openingTag: string, closingTag: string): boolean {
  * @param {string} paragraph - The paragraph to be validated.
  * @returns {string} - A validation message indicating the correctness of tag pairing.
  */
-export function validateTagNames(paragraph: string): string {
+export function validateTags(paragraph: string): string {
     const tags: string[] = extractTags(paragraph);
     const tagStack: string[] = [];
 
