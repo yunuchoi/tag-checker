@@ -4,6 +4,7 @@
 
 1. The count of tags in a paragraph and the length of a paragraph are finite, countable and computationally manageable.
 2. Paragraphs without tags are correctly tagged paragraphs.
+3. Tags do not contain any attributes.
 
 
 ---
