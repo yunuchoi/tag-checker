@@ -1,4 +1,4 @@
-import { checkTags } from "./src/checkTags";
+import { validateTagNames } from "./src/validateTagNames";
 
 const paragraph: string = process.argv[2];
 
@@ -7,5 +7,5 @@ if (!paragraph) {
     process.exit(1);
 }
 
-const output: string = checkTags(paragraph);
+const output: string = validateTagNames(paragraph);
 console.log(output);
